@@ -1,74 +1,76 @@
-# 🎞️ Video Frame Extractor
+# 🎞️ Video Frame Extractor  
+A lightweight Python script to extract frames from a video file at a specified rate using OpenCV.
 
-A simple Python script to extract frames from a video at a specific rate and save them as image files using OpenCV.
+## ✨ Features  
+- 📹 Extracts frames from `.mp4` and other supported video formats  
+- 🖼️ Saves frames as high-quality `.jpg` images  
+- ⚙️ Customizable frame extraction rate (e.g., 2 frames per second)  
+- 📁 Automatically creates the output directory if it doesn't exist  
 
-## 📌 Features
+## 📂 Project Structure  
+```
 
-- 🎥 Extracts frames from video files (e.g., `.mp4`)
-- 🖼️ Saves frames as `.jpg` images
-- ⏱️ Customizable extraction rate (frames per second)
-- 📂 Automatically creates output directory if it doesn't exist
+video-frame-extractor/
+├── main.py                # Core script to extract frames
+├── video\_input/           # Folder to store input video
+│   └── video.mp4
+├── video\_output/          # Folder where extracted frames will be saved
+└── README.md              # Project documentation
 
----
+````
 
-## 📁 Folder Structure
+## 🛠️ Requirements  
+- Python 3.x  
+- OpenCV  
 
-project/
-│
-├── video_input/
-│ └── video.mp4 # Input video file
-│
-├── video_output/ # Extracted frames will be saved here
-│
-└── main.py # Python script to run
-
-
----
-
-## 🚀 Getting Started
-
-### ✅ Prerequisites
-
-- Python 3.x
-- OpenCV
-
-Install the required dependency:
-
+Install dependencies using pip:  
 ```bash
 pip install opencv-python
+````
 
-⚙️ Usage
-Place your video file inside the video_input/ directory.
+## 🚀 Usage
 
-Run the Python script.
+1. Place your input video (e.g., `video.mp4`) in the `video_input/` folder.
+2. Run the script:
+
+```bash
 python main.py
-Extracted frames will be saved in the video_output/ folder.
+```
 
-🎯 Customize Frame Extraction Rate
-You can change how many frames per second to extract by modifying:
+3. Frames will be saved in the `video_output/` directory.
 
-video_to_frames(video_path, output_folder, fps_to_extract=2)  # 2 frames per second
+## 🎯 Customization
 
-🧠 How It Works
-Loads video using OpenCV.
+To change the frame extraction rate, modify the `fps_to_extract` parameter:
 
-Retrieves video FPS (frames per second).
+```python
+video_to_frames(video_path, output_folder, fps_to_extract=2)
+```
 
-Calculates interval based on desired extraction FPS.
+For example, setting `fps_to_extract=5` will extract 5 frames per second.
 
-Saves selected frames as .jpg images.
+## 🧠 How It Works
 
-video_output/
-├── frame_0000.jpg
-├── frame_0001.jpg
-├── frame_0002.jpg
+* The script opens the video using OpenCV
+* Calculates how frequently frames should be extracted based on the original video FPS
+* Saves frames at regular intervals using `cv2.imwrite()`
+
+## 🖼️ Sample Output
+
+```
+video_output/  
+├── frame_0000.jpg  
+├── frame_0001.jpg  
+├── frame_0002.jpg  
 └── ...
+```
 
-📃 License
-This project is licensed under the MIT License.
+## 📄 License
 
+This project is licensed under the [MIT License](LICENSE).
 
-💡 Created with ❤️ using Python and OpenCV
+> Created with ❤️ by \Kejal Jain — Powered by Python & OpenCV
 
-Just copy and paste this into a `README.md` file in your GitHub repository. Let me know if you'd like badges or enhancements like GIF demos!
+```
+
 
