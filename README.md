@@ -71,6 +71,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 > Created with ❤️ by \Kejal Jain — Powered by Python & OpenCV
 
-```
-
 
