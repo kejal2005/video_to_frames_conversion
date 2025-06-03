@@ -69,6 +69,6 @@ video_output/
 
 This project is licensed under the [MIT License](LICENSE).
 
-> Created with ❤️ by \Kejal Jain — Powered by Python & OpenCV
+> Created with  \Kejal Jain — Powered by Python & OpenCV
 
 
